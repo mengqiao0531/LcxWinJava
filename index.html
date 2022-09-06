@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>祝李程翔中秋快乐及JAVA考试顺利通过</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- github 可以删除-->
+    <a href="https://www.bilibili.com/video/BV1fh411y7R8?spm_id_from=333.999.0.0">
+        <img id="github" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-c7e057c35877b84a7a78de4a691c8c99_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic1.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1664963010&t=050a89dc3de3d3da84ca09bc52ee55fb" alt="Fork me on GitHub">
+    </a>
+    <!-- 头像 -->
+    <div class="cs">
+        <img src="./head.jpg" id="logo">
+    </div>
+    <canvas class="canvas" width="1820" height="905"></canvas>
+    <!-- 出生计时 -->
+    <p class="text">
+        <h1 style="
+        color: #ee8f8f;
+        margin-left: 620px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        text-shadow: 0 -6px 4px #ff0000, /*上*/ 4px -4px 4px #3c4e9e, /*右上*/ 6px 0 4px #32003c, /*右*/ 4px 4px 4px #ffffff, /*右下*/ 0 6px 4px #37a5c0, /*下*/ -4px 4px 4px #8970e6, /*左下*/ -6px 0 4px #0021ff, /*左*/ -4px -4px 4px #000000;
+    ">距离JAVA考试还有:</h1><br />
+        <body>
+            <h1 id="hh"style="
+            margin-left: 620px;
+            margin-bottom: 100px;
+            margin-top: 1px;
+            width: 500px;
+            margin-right: 10px;
+            color: #ee8f8f;
+            text-shadow: 0 -6px 4px #ff0000, /*上*/ 4px -4px 4px #46ff00, /*右上*/ 6px 0 4px #32003c, /*右*/ 4px 4px 4px #ffffff, /*右下*/ 0 6px 4px #ffd500, /*下*/ -4px 4px 4px #ee00ff, /*左下*/ -6px 0 4px #0021ff, /*左*/ -4px -4px 4px #000000;
+        "></h1>
+        </body>
+        <script type="text/javascript">
+            function station(x,y,z){
+                //当前时间
+                var now = Date.now(),
+                    //结束时间
+                    end = new Date(x,y-1,z),
+                    ends = end.getTime();
+                var ss = ends - now;
+                var s = Math.floor(ss/1000);
+                //相差天数
+                var day = Math.floor(s / 60 / 60 / 24);
+                //相差小时数
+                var hours = Math.floor(s / 60 / 60 % 24);
+                //相差分钟数
+                var min = Math.floor(s / 60 % 60 );
+                //相差秒数
+                var sec = Math.floor(s % 60 );
+                var html = day+"天"+hours+"时"+min+"分"+sec+"秒";
+                hh.innerHTML = html;
+    
+            }
+            station(2022,09,11);
+            //一秒一次调用
+            setInterval(function(){
+                station(2022,09,11);
+            },1000);
+        </script>
+        <span id="span_dt_dt"></span>
+    </p>
+</body>
+<!--  设定出生日期 -->
+<!-- <script type="text/javascript" src="time.js"></script> -->
+
+<!-- canvas动画 -->
+<script type="text/javascript" src="index.js"></script>
+<!-- 背景音乐 -->
+<audio id="music" src="./好运来.mp3" autoplay="autoplay" preload="auto" loop="loop">该浏览器不支持audio属性</audio>
+<!-- copyright -->
+<footer style="color: #BBE1FA; text-align:center;">
+    <font size="2" color=#BBE1FA>©2022 中秋快乐 &nbsp 我的朋友</font>
+</footer>
+
+</html>
